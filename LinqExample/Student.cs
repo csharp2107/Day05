@@ -12,5 +12,10 @@ namespace LinqExample
         public String Name { get; set; }
         public String Gender { get; set; }
         public List<String> Subject { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}, {Name}, {Gender}";
+        }
     }
 }

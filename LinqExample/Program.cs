@@ -13,7 +13,9 @@ namespace LinqExample
             //DummyClass.Test();
             //_01Example.Test();
             //_02Aggregation.Test();
-            _03Sorting.Test();
+            //_03Sorting.Test();
+            //_04Partition.Test();
+            _05Elements.Test();
         }
     }
 }
