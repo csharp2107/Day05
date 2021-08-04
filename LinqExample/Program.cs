@@ -17,7 +17,8 @@ namespace LinqExample
             //_04Partition.Test();
             //_05Elements.Test();
             //_06Casting.Test();
-            _07Grouping.Test();
+            //_07Grouping.Test();
+            _08JoinOperators.Test();
         }
     }
 }
