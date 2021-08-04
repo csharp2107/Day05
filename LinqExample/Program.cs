@@ -18,7 +18,14 @@ namespace LinqExample
             //_05Elements.Test();
             //_06Casting.Test();
             //_07Grouping.Test();
-            _08JoinOperators.Test();
+            //_08JoinOperators.Test();
+            //_09SetOperators.Test();
+            for (int i = 0; i < 10; i++)
+            {
+                LinqPerformance.Test();
+            }
+            Console.ReadKey();
+
         }
     }
 }
