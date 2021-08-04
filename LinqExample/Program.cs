@@ -15,7 +15,9 @@ namespace LinqExample
             //_02Aggregation.Test();
             //_03Sorting.Test();
             //_04Partition.Test();
-            _05Elements.Test();
+            //_05Elements.Test();
+            //_06Casting.Test();
+            _07Grouping.Test();
         }
     }
 }

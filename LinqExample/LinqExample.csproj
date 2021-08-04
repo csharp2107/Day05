@@ -46,6 +46,8 @@
     <Compile Include="01Example.cs" />
     <Compile Include="02Aggregation.cs" />
     <Compile Include="03Sorting.cs" />
+    <Compile Include="07Grouping.cs" />
+    <Compile Include="06Casting.cs" />
     <Compile Include="04Partition.cs" />
     <Compile Include="05Elements.cs" />
     <Compile Include="DummyClass.cs" />

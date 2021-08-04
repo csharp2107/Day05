@@ -46,6 +46,12 @@ namespace LinqExample
             result = students.SingleOrDefault(s => s.Name.Equals("XYZ"));
             Console.WriteLine(result);
 
+            int[] empyInts = { };
+            y = empyInts.DefaultIfEmpty().First();
+            Console.WriteLine(y);
+
+            students.RemoveRange(0, 2); //remove first two elements from list
+
             Console.ReadKey();
 
         }
