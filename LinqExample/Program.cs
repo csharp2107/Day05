@@ -24,7 +24,8 @@ namespace LinqExample
             //{
             //    LinqPerformance.Test();
             //}
-            LinqXML.Test();
+            //LinqXML.Test();
+            LinqDataset.Test();
             Console.ReadKey();
 
         }

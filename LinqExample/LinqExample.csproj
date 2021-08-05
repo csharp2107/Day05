@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +54,7 @@
     <Compile Include="04Partition.cs" />
     <Compile Include="05Elements.cs" />
     <Compile Include="DummyClass.cs" />
+    <Compile Include="LinqDataset.cs" />
     <Compile Include="LinqPerformance.cs" />
     <Compile Include="LinqXML.cs" />
     <Compile Include="Program.cs" />
