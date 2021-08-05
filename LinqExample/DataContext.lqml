@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="world" EntityNamespace="WorldContext" ContextNamespace="WorldContext" Class="WorldDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="b06aff63-1c96-42f9-a482-3554aa341bf0" Provider="Devart.Data.MySql.Linq.Provider.MySqlDataProvider, Devart.Data.MySql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=world;Password=world123;Host=18.196.156.27;Database=world;Persist Security Info=True" Provider="Devart.Data.MySql" />
+  <Table Name="world.country" Member="Countries">
+    <Type Name="Country" ed:Guid="82b1f35b-6285-47f9-a4e3-e5828f9357fd">
+      <Column Name="Code" Type="System.String" DbType="CHAR(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="''" FixedLength="true" MaxLength="3" Unicode="true" ed:ValidateMaxLength="3" ed:ValidateRequired="true" ed:Guid="3c32e8df-bbd8-42af-bf80-c1db0155ef50" />
+      <Column Name="Name" Type="System.String" DbType="CHAR(52) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="52" Unicode="true" ed:ValidateMaxLength="52" ed:ValidateRequired="true" ed:Guid="a630d273-6294-419a-83f3-ee6788b646a4" />
+      <Column Name="Continent" Type="System.String" DbType="ENUM NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'Asia'" Unicode="true" ed:ValidateRequired="true" ed:Guid="b5ab3a43-8fc3-4823-a474-2863f43173de" />
+      <Column Name="Region" Type="System.String" DbType="CHAR(26) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="26" Unicode="true" ed:ValidateMaxLength="26" ed:ValidateRequired="true" ed:Guid="d2a40937-7043-4f4b-b8bc-eade3f653945" />
+      <Column Name="SurfaceArea" Type="System.Decimal" DbType="DECIMAL(10,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="0.00" Precision="10" Scale="2" ed:ValidateRequired="true" ed:Guid="8dfc6f49-dc78-435f-9826-e75451eaad07" />
+      <Column Name="IndepYear" Type="System.Int16" DbType="SMALLINT(6) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="6" ed:ValidateRequired="false" ed:Guid="e168d5a8-56ab-4c88-b4c2-c0c00885d7de" />
+      <Column Name="Population" Type="System.Int32" DbType="INT(11) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="0" Precision="11" ed:ValidateRequired="true" ed:Guid="83fa3153-7097-4aec-9ba5-72f7bf049d05" />
+      <Column Name="LifeExpectancy" Type="System.Decimal" DbType="DECIMAL(3,1) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="3" Scale="1" ed:ValidateRequired="false" ed:Guid="ccbf00c7-504d-400d-af13-35395aa1fd6a" />
+      <Column Name="GNP" Type="System.Decimal" DbType="DECIMAL(10,2) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="10" Scale="2" ed:ValidateRequired="false" ed:Guid="825992bd-4919-4832-8c7a-0b673c580093" />
+      <Column Name="GNPOld" Type="System.Decimal" DbType="DECIMAL(10,2) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="10" Scale="2" ed:ValidateRequired="false" ed:Guid="ca74bcbd-3b00-424b-8d49-a9f6a757edef" />
+      <Column Name="LocalName" Type="System.String" DbType="CHAR(45) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="45" Unicode="true" ed:ValidateMaxLength="45" ed:ValidateRequired="true" ed:Guid="15a2960f-1fd9-424f-833f-eda665f6d43b" />
+      <Column Name="GovernmentForm" Type="System.String" DbType="CHAR(45) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="45" Unicode="true" ed:ValidateMaxLength="45" ed:ValidateRequired="true" ed:Guid="3d22aeb3-3fab-4aad-a019-0709119ce341" />
+      <Column Name="HeadOfState" Type="System.String" DbType="CHAR(60) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" FixedLength="true" MaxLength="60" Unicode="true" ed:ValidateMaxLength="60" ed:ValidateRequired="false" ed:Guid="3ebd628a-6036-4bd6-8eb2-3bf9bc7bcce0" />
+      <Column Name="Capital" Type="System.Int32" DbType="INT(11) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="11" ed:ValidateRequired="false" ed:Guid="c59f7124-827a-45a0-87c4-ccf59d3a1018" />
+      <Column Name="Code2" Type="System.String" DbType="CHAR(2) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="2" Unicode="true" ed:ValidateMaxLength="2" ed:ValidateRequired="true" ed:Guid="4878bd08-9928-44bd-9cf9-d24e13526691" />
+      <Association Name="Country_City" ed:AssociationGuid="7204f63e-ee59-4bd1-ab72-4b024f51da5d" Member="Cities" ed:Guid="61049fa6-feb3-4b84-becb-2205953809e7" ThisKey="Code" OtherKey="CountryCode" Type="City" />
+      <Association Name="Country_Countrylanguage" ed:AssociationGuid="0dc1b11b-86ac-4a95-93b9-cddda01417cf" Member="Countrylanguages" ed:Guid="bafc36ce-07a2-42eb-b18b-a5b1220e83cd" ThisKey="Code" OtherKey="CountryCode" Type="Countrylanguage" />
+    </Type>
+  </Table>
+  <Table Name="world.city" Member="Cities">
+    <Type Name="City" ed:Guid="a34388be-ebb9-46e6-993d-74d696ea5004">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="INT(11) NOT NULL AUTO_INCREMENT" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="4d362f72-7013-4209-b59f-5b39c6309499" />
+      <Column Name="Name" Type="System.String" DbType="CHAR(35) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="35" Unicode="true" ed:ValidateMaxLength="35" ed:ValidateRequired="true" ed:Guid="f745d25b-2682-4171-9d5e-9d0b300f866d" />
+      <Column Name="CountryCode" Type="System.String" DbType="CHAR(3) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="3" Unicode="true" ed:ValidateMaxLength="3" ed:ValidateRequired="true" ed:Guid="06813c7a-22d3-4c9b-b8d9-a3af37c13998" />
+      <Column Name="District" Type="System.String" DbType="CHAR(20) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" FixedLength="true" MaxLength="20" Unicode="true" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="09eb3e76-04d8-4097-9cb5-2b6c6cc113c0" />
+      <Column Name="Population" Type="System.Int32" DbType="INT(11) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="0" Precision="11" ed:ValidateRequired="true" ed:Guid="3a7bfbfd-a5dc-4509-afcc-a3fe96c2fe32" />
+      <Association Name="Country_City" ed:AssociationGuid="7204f63e-ee59-4bd1-ab72-4b024f51da5d" Member="Country" ed:Guid="1cfd3456-18be-47ca-bece-0d5cbe37ec9e" ThisKey="CountryCode" OtherKey="Code" Type="Country" DeleteRule="RESTRICT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="world.countrylanguage" Member="Countrylanguages">
+    <Type Name="Countrylanguage" ed:Guid="580490e7-d2f3-4537-abcf-7597a45f5eee">
+      <Column Name="CountryCode" Type="System.String" DbType="CHAR(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="''" FixedLength="true" MaxLength="3" Unicode="true" ed:ValidateMaxLength="3" ed:ValidateRequired="true" ed:Guid="bf9bb58a-7ed9-42a4-8f3b-cf3a2dc2ddd5" />
+      <Column Name="Language" Type="System.String" DbType="CHAR(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="''" FixedLength="true" MaxLength="30" Unicode="true" ed:ValidateMaxLength="30" ed:ValidateRequired="true" ed:Guid="31b3edb4-a73a-4e36-8249-04867130bec6" />
+      <Column Name="IsOfficial" Type="System.String" DbType="ENUM NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'F'" Unicode="true" ed:ValidateRequired="true" ed:Guid="22350533-4301-4ff1-be6f-b8a478dd318a" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="DECIMAL(4,1) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="0.0" Precision="4" Scale="1" ed:ValidateRequired="true" ed:Guid="f571aab1-b573-4a98-982d-7dad16d0619a" />
+      <Association Name="Country_Countrylanguage" ed:AssociationGuid="0dc1b11b-86ac-4a95-93b9-cddda01417cf" Member="Country" ed:Guid="d4dea02f-7652-48e5-b8db-80ecba328748" ThisKey="CountryCode" OtherKey="Code" Type="Country" DeleteRule="RESTRICT" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
