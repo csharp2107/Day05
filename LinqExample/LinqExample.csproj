@@ -54,6 +54,7 @@
     <Compile Include="05Elements.cs" />
     <Compile Include="DummyClass.cs" />
     <Compile Include="LinqPerformance.cs" />
+    <Compile Include="LinqXML.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
